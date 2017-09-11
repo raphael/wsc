@@ -32,7 +32,8 @@ func main() {
 		h       headers
 		origURL *url.URL
 	)
-	flag.Var(&h, "H", "Headers to use in the WS request, can be used to multiple times to specfiy multiple headers")
+	flag.Var(&h, "H", `Headers to use in the WS request, can be used to multiple times to specify multiple headers.`+
+		` Example: -H "Sample-Header-1: foo" -H "Sample-Header-2: bar"`)
 	flag.Parse()
 
 	if *target == "" {
